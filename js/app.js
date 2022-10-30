@@ -130,5 +130,31 @@ languageOption.forEach(item=>{
 	})
 })
 
+//initial-dotts
+
+
+
+let dotts = document.querySelectorAll(".initial__dekor-dotts");
+
+
+
+
+
+function randomaizer(){
+
+	dotts.forEach( dotts=> {
+		let randomWidth = 0 + Math.round(Math.random()* (100- 0));
+		let randomHeight= 0 + Math.round(Math.random()* (100- 0));
+		dotts.style.left = `${randomWidth}%`;
+		dotts.style.top = `${randomHeight}%`;
+	})
+
+}
+
+
+randomaizer()
+setTimeout(randomaizer, 0);
+setInterval(randomaizer, 3000);
+
 
 

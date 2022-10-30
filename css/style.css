@@ -4,8 +4,8 @@ header {
   left: 0;
   width: 100%;
   z-index: 500;
-  padding-top: calc(15px + 15 * ((100vw - 320px) / 1120));
-  padding-bottom: calc(15px + 15 * ((100vw - 320px) / 1120));
+  padding-top: calc(15px + 15 * ((100vw - 320px) / 1600));
+  padding-bottom: calc(15px + 15 * ((100vw - 320px) / 1600));
   color: #fff;
   -webkit-transition: all 0.3s linear;
   -o-transition: all 0.3s linear;
@@ -38,12 +38,12 @@ header {
 }
 
 .header__wr {
-  gap: calc(15px + 20 * ((100vw - 320px) / 1120));
+  gap: calc(15px + 40 * ((100vw - 320px) / 1600));
 }
 
 .header__wr-logo {
   font-family: "Arial";
-  font-size: calc(15px + 2 * ((100vw - 320px) / 1120));
+  font-size: calc(15px + 2 * ((100vw - 320px) / 1600));
 }
 
 .header__wr-list {
@@ -59,14 +59,14 @@ header {
   background-color: #fff;
   padding-left: 16px;
   border-radius: 5px;
-  padding-left: calc(9px + 7 * ((100vw - 320px) / 1120));
+  padding-left: calc(9px + 7 * ((100vw - 320px) / 1600));
 }
 
 .select__language span {
   color: #2E3A59;
   font-weight: 700;
-  font-size: calc(12px + 5 * ((100vw - 320px) / 1120));
-  margin-left: calc(9px + 6 * ((100vw - 320px) / 1120));
+  font-size: calc(12px + 5 * ((100vw - 320px) / 1600));
+  margin-left: calc(9px + 6 * ((100vw - 320px) / 1600));
 }
 
 .more__language {
@@ -122,8 +122,8 @@ header {
 .arrow__language {
   padding: 0 13px;
   height: 100%;
-  padding-top: calc(13px + 12 * ((100vw - 320px) / 1120));
-  padding-bottom: calc(13px + 12 * ((100vw - 320px) / 1120));
+  padding-top: calc(13px + 12 * ((100vw - 320px) / 1600));
+  padding-bottom: calc(13px + 12 * ((100vw - 320px) / 1600));
 }
 
 .personal-office {
@@ -135,6 +135,10 @@ header {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
+}
+
+.header__burger-btn {
+  display: none;
 }
 
 .header__burger-btn__open:after {
@@ -340,8 +344,7 @@ html {
           user-select: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -tap-highlight-color: rgba(0, 0, 0, 0);
-  background-color: skyblue;
-  font-size: calc(12px + 6 * ((100vw - 320px) / 1120));
+  font-size: calc(12px + 6 * ((100vw - 320px) / 1600));
   font-family: "Montserrat";
 }
 
@@ -360,20 +363,26 @@ a {
 .content {
   margin: 0 auto;
   max-width: 1215px;
-  padding-left: calc(15px + 15 * ((100vw - 320px) / 1120));
-  padding-right: calc(15px + 15 * ((100vw - 320px) / 1120));
+  padding-left: calc(15px + 15 * ((100vw - 320px) / 1600));
+  padding-right: calc(15px + 15 * ((100vw - 320px) / 1600));
 }
 
 .container {
   max-width: 1470px;
-  padding-left: calc(15px + 15 * ((100vw - 320px) / 1120));
-  padding-right: calc(15px + 15 * ((100vw - 320px) / 1120));
+  padding-left: calc(15px + 15 * ((100vw - 320px) / 1600));
+  padding-right: calc(15px + 15 * ((100vw - 320px) / 1600));
   margin: 0 auto;
 }
 
 .wrapper {
   position: relative;
   overflow: hidden;
+}
+
+h1 {
+  font-weight: 800;
+  line-height: 120%;
+  font-size: calc(30px + 25 * ((100vw - 320px) / 1600));
 }
 
 footer {
@@ -479,13 +488,36 @@ footer {
   height: 100%;
 }
 
+.initial {
+  background: -o-linear-gradient(336.72deg, #1A47EA 3.44%, #82E9FF 96.25%);
+  background: linear-gradient(113.28deg, #1A47EA 3.44%, #82E9FF 96.25%);
+  -webkit-backdrop-filter: blur(3.5px);
+          backdrop-filter: blur(3.5px);
+  padding-top: calc(92px + 116 * ((100vw - 320px) / 1600));
+  padding-bottom: calc(140px + 180 * ((100vw - 320px) / 1600));
+  color: #fff;
+  position: relative;
+  height: 100vh;
+}
+
+.initial__dekor-dotts {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #fff;
+  -webkit-transition: all 3s linear;
+  -o-transition: all 3s linear;
+  transition: all 3s linear;
+}
+
 @media (min-width: 600px) {
   .personal-office {
     max-height: 57px;
-    height: calc(30px + 27 * ((100vw - 320px) / 1120));
-    padding-left: calc(10px + 16 * ((100vw - 320px) / 1120));
-    padding-right: calc(10px + 16 * ((100vw - 320px) / 1120));
-    padding-top: calc(5px + 5 * ((100vw - 320px) / 1120));
+    height: calc(30px + 27 * ((100vw - 320px) / 1600));
+    padding-left: calc(10px + 16 * ((100vw - 320px) / 1600));
+    padding-right: calc(10px + 16 * ((100vw - 320px) / 1600));
+    padding-top: calc(5px + 5 * ((100vw - 320px) / 1600));
     display: inline-block;
     background: -o-linear-gradient(351.11deg, #FF9B05 25.06%, #FF8F3F 88.94%);
     background: linear-gradient(98.89deg, #FF9B05 25.06%, #FF8F3F 88.94%);
@@ -505,7 +537,7 @@ footer {
 @media (min-width: 767px) {
   .header__wr-list li {
     position: relative;
-    font-size: calc(8px + 10 * ((100vw - 320px) / 1120));
+    font-size: calc(8px + 10 * ((100vw - 320px) / 1600));
     cursor: pointer;
     -webkit-transition: all 0.3s linear;
     -o-transition: all 0.3s linear;
@@ -593,6 +625,7 @@ footer {
   }
 
   .header__burger-btn {
+    display: block;
     width: 35px;
     height: 40px;
     position: relative;
