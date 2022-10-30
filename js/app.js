@@ -88,8 +88,15 @@ btnBurger.addEventListener("click", ()=>{
 });
 
 
+let burgerItems = burgerBody.querySelectorAll("li");
 
-
+burgerItems.forEach(item=>{
+	item.addEventListener("click", ()=>{
+		burgerBody.classList.remove("burger__body-active");
+		btnBurger.classList.remove("header__burger-btn__open");
+		burgerWr.style.display = "none";
+	})
+})
 
 
 
