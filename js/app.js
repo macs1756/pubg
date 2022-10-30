@@ -49,14 +49,53 @@ if(
 	moreLanguage.classList.remove("more__language-active");
 }
 
+
+
 });
 
+
+
+let burgerBody = document.querySelector(".burger__body");
 let btnBurger = document.querySelector(".header__burger-btn");
+let burgerWr = document.querySelector(".burger__body-wr");
+
+
+
+
+
+
+
+
+
+burgerWr.addEventListener("click", ()=>{
+	
+	burgerBody.classList.remove("burger__body-active");
+	btnBurger.classList.remove("header__burger-btn__open");
+})
+
+
 
 
 btnBurger.addEventListener("click", ()=>{
+	burgerBody.classList.toggle("burger__body-active");
 	btnBurger.classList.toggle("header__burger-btn__open");
+	if(burgerBody.className === "burger__body burger__body-active"){
+		burgerWr.style.display = "block";
+	}else{
+		burgerWr.style.display = "none";
+	}
+	
 });
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -66,15 +105,16 @@ let languageOption = document.querySelectorAll(".language__option");
 
 languageOption.forEach(item=>{
 	item.addEventListener("click", (e)=>{ 
+
 		let srcImg =  item.children[0].getAttribute("src");
 		let text = item.children[1].innerText;
 		
+
 		let currentImg = document.querySelector("#currentImg");
 		let currentText = document.querySelector("#currentText");
 
-		currentText.innerText = text;
 
-		console.log(srcImg);
+		currentText.innerText = text;
 		currentImg.setAttribute("src", srcImg);
 		
 
