@@ -182,4 +182,7 @@ function randomOpacity(){
 setInterval(randomOpacity, 1000);
 
 
-
+if(window.innerWidth < 601){
+	let initialBtn = document.querySelector(".initial__btn-video");
+	initialBtn.innerText = "Видео-ролик";
+}
