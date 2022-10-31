@@ -46,13 +46,14 @@ header {
 }
 
 .header__wr-logo {
-  font-family: "Arial";
-  font-size: calc(15px + 2 * ((100vw - 320px) / 1600));
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
 }
 
 .header__wr-list {
   font-weight: 700;
-  gap: 5px;
+  gap: 15px;
 }
 
 .select__language {
@@ -367,14 +368,14 @@ a {
 .content {
   margin: 0 auto;
   max-width: 1215px;
-  padding-left: calc(15px + 15 * ((100vw - 320px) / 1600));
-  padding-right: calc(15px + 15 * ((100vw - 320px) / 1600));
+  padding-left: calc(15px + 85 * ((100vw - 320px) / 1600));
+  padding-right: calc(15px + 85 * ((100vw - 320px) / 1600));
 }
 
 .container {
   max-width: 1470px;
-  padding-left: calc(15px + 35 * ((100vw - 320px) / 1600));
-  padding-right: calc(15px + 35 * ((100vw - 320px) / 1600));
+  padding-left: calc(15px + 85 * ((100vw - 320px) / 1600));
+  padding-right: calc(15px + 85 * ((100vw - 320px) / 1600));
   margin: 0 auto;
 }
 
@@ -384,11 +385,25 @@ a {
 }
 
 h1 {
+  position: relative;
   font-weight: 800;
   line-height: 120%;
   font-size: calc(30px + 25 * ((100vw - 320px) / 1600));
   position: relative;
   padding-bottom: calc(15px + 13 * ((100vw - 320px) / 1600));
+}
+
+h1:after {
+  content: "cheats";
+  text-transform: uppercase;
+  position: absolute;
+  top: calc(-20px + -30 * ((100vw - 320px) / 1600));
+  left: 30%;
+  display: block;
+  font-weight: 600;
+  font-size: calc(20px + 25 * ((100vw - 320px) / 1600));
+  line-height: 120%;
+  color: rgba(255, 255, 255, 0.08);
 }
 
 .btn {
@@ -515,6 +530,7 @@ footer {
   padding-bottom: calc(140px + 180 * ((100vw - 320px) / 1600));
   color: #fff;
   position: relative;
+  overflow: hidden;
 }
 
 .no-webp .initial:after {
@@ -550,12 +566,25 @@ footer {
 .initial__body-img,
 .initial__body-text {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 50%;
-          flex: 0 1 50%;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
 }
 
 .initial__body-img {
+  position: relative;
   display: none;
+}
+
+.initial__body-img:after {
+  content: "WallHack";
+  display: block;
+  font-weight: 600;
+  font-size: calc(20px + 35 * ((100vw - 320px) / 1600));
+  line-height: 67px;
+  color: rgba(255, 255, 255, 0.11);
+  position: absolute;
+  bottom: -35px;
+  right: 0;
 }
 
 .triangle {
@@ -638,10 +667,23 @@ footer {
   margin-bottom: calc(15px + 12 * ((100vw - 320px) / 1600));
 }
 
+.initial__body-text {
+  position: relative;
+}
+
 .initial__body-text P {
   font-size: calc(12px + 6 * ((100vw - 320px) / 1600));
   line-height: 120%;
   font-weight: 600;
+}
+
+.initial__body-text .initial__dekor-orange__line {
+  position: absolute;
+  top: 0%;
+  right: -100px;
+  width: calc(30px + 60 * ((100vw - 320px) / 1600));
+  -webkit-filter: blur(1px);
+          filter: blur(1px);
 }
 
 .initial__p-top {
@@ -657,6 +699,7 @@ footer {
 }
 
 .initial__btn-buy {
+  overflow: hidden;
   gap: calc(13px + 21 * ((100vw - 320px) / 1600));
   padding-top: calc(18px + 6 * ((100vw - 320px) / 1600));
   padding-bottom: calc(18px + 6 * ((100vw - 320px) / 1600));
@@ -676,9 +719,10 @@ footer {
   border-radius: 5px;
   padding-top: calc(19px + 9 * ((100vw - 320px) / 1600));
   padding-bottom: calc(19px + 9 * ((100vw - 320px) / 1600));
-  font-size: calc(13px + 5 * ((100vw - 320px) / 1600));
   padding-left: calc(24px + 20 * ((100vw - 320px) / 1600));
   padding-right: calc(24px + 20 * ((100vw - 320px) / 1600));
+  font-size: calc(13px + 5 * ((100vw - 320px) / 1600));
+  white-space: nowrap;
   font-weight: 600;
 }
 
@@ -761,6 +805,21 @@ footer {
 @media (min-width: 768px) {
   .initial__body-img {
     display: block;
+  }
+}
+
+@media (min-width: 1470px) {
+  .header__wr-list li {
+    font-size: 18px;
+  }
+
+  h1 {
+    font-size: 55px;
+  }
+
+  .initial__btn-video {
+    font-size: 18px;
+    padding: 28px 44px;
   }
 }
 
@@ -871,6 +930,11 @@ footer {
     height: 3px;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .initial__body-text .initial__dekor-orange__line {
+    top: 40px;
+    right: 0;
   }
 
   .initial__btn {
