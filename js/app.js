@@ -186,3 +186,72 @@ if(window.innerWidth < 601){
 	let initialBtn = document.querySelector(".initial__btn-video");
 	initialBtn.innerText = "Видео-ролик";
 }
+
+
+
+
+
+//scroll effect
+
+//елементи яким ми хочемо задати скролл
+let scrollAnimation = document.querySelectorAll(".anim");
+
+
+
+
+
+
+
+if(scrollAnimation.length > 0){
+	window.addEventListener("scroll" , AddScrollEffect);
+	function AddScrollEffect() {
+		for(index=0; index<scrollAnimation.length; index++){
+				//получаємо всі елементи яким потрібно примінити ефект
+				let animItem = scrollAnimation[index];
+				//получаємо висоту елемента 
+				let animItemHeight = animItem.offsetHeight;
+				//висота підносно верху вікна віндовс
+				let animItemOffSet = offset(animItem).top;
+				//коефіцієнт коли почне працювати анімація
+				let animStart = 4;
+
+				//calc
+				let animItemPoint = window.innerHeight - animItemHeight / animStart;
+				if(animItemHeight > window.innerHeight){
+					let animItemPoint = window.innerHeight - window.innerHeight / animStart;
+				}
+
+
+				if((pageYOffset > animItemOffSet - animItemPoint) && pageYOffset < (animItemOffSet + animItemHeight)){
+					animItem.classList.add("active");
+				}else{
+					animItem.classList.add("active");
+				}
+
+
+		}
+	}
+
+
+  				//функція вираховує позицію елемента відносно віндовс
+	function offset(el){
+		const rect = el.getBoundingClientRect(),
+		scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+		scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+		return { top: rect.top + scrollTop, left: rect.left + scrollLeft}
+	}
+
+
+
+
+
+
+
+
+//при запуску функції одразу анімація блоку інітіал виконується одразу
+	setTimeout(AddScrollEffect, 300)
+	//AddScrollEffect();
+}
+
+
+
