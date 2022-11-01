@@ -864,9 +864,6 @@ footer {
 }
 
 .functional__p {
-  -webkit-transition: all 0.8s linear 0.4s;
-  -o-transition: all 0.8s linear 0.4s;
-  transition: all 0.8s linear 0.4s;
   color: #828282;
   line-height: 130%;
   padding-bottom: calc(30px + 30 * ((100vw - 320px) / 1600));
