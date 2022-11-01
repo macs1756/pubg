@@ -195,6 +195,8 @@ if(window.innerWidth < 601){
 
 //елементи яким ми хочемо задати скролл
 let scrollAnimation = document.querySelectorAll(".anim");
+let intialBtnBuy = document.querySelector(".initial__btn-buy");
+let intialBtnVideo = document.querySelector(".initial__btn-video");
 
 
 
@@ -213,19 +215,24 @@ if(scrollAnimation.length > 0){
 				//висота підносно верху вікна віндовс
 				let animItemOffSet = offset(animItem).top;
 				//коефіцієнт коли почне працювати анімація
-				let animStart = 4;
+				let animStart = 6;
 
 				//calc
 				let animItemPoint = window.innerHeight - animItemHeight / animStart;
+
 				if(animItemHeight > window.innerHeight){
 					let animItemPoint = window.innerHeight - window.innerHeight / animStart;
+				}else{
+					let animItemPoint = window.innerHeight - animItemHeight / animStart;
 				}
 
-
-				if((pageYOffset > animItemOffSet - animItemPoint) && pageYOffset < (animItemOffSet + animItemHeight)){
+				
+				if((scrollY > animItemOffSet - animItemPoint) && scrollY < (animItemOffSet + animItemHeight)){
 					animItem.classList.add("active");
+					intialBtnBuy.classList.add("activeBtnBuy");
+					intialBtnVideo.classList.add("activeBtnVideo");
 				}else{
-					animItem.classList.add("active");
+					
 				}
 
 

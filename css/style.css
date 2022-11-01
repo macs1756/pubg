@@ -412,6 +412,9 @@ h1:after {
 }
 
 h2 {
+  -webkit-transition: all 0.8s linear;
+  -o-transition: all 0.8s linear;
+  transition: all 0.8s linear;
   position: relative;
   font-size: calc(30px + 15 * ((100vw - 320px) / 1600));
   line-height: 120%;
@@ -861,6 +864,9 @@ footer {
 }
 
 .functional__p {
+  -webkit-transition: all 0.8s linear 0.4s;
+  -o-transition: all 0.8s linear 0.4s;
+  transition: all 0.8s linear 0.4s;
   color: #828282;
   line-height: 130%;
   padding-bottom: calc(30px + 30 * ((100vw - 320px) / 1600));
@@ -1169,6 +1175,40 @@ footer {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+
+  .initial__btn-buy {
+    -webkit-transition: all 1s linear 0.7s;
+    -o-transition: all 1s linear 0.7s;
+    transition: all 1s linear 0.7s;
+    -webkit-transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
+            transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  .activeBtnBuy {
+    -webkit-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+            transform: translateX(0%);
+    opacity: 1;
+  }
+
+  .initial__btn-video {
+    -webkit-transition: all 1s linear 0.7s;
+    -o-transition: all 1s linear 0.7s;
+    transition: all 1s linear 0.7s;
+    -webkit-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+            transform: translateX(100%);
+    opacity: 0;
+  }
+
+  .activeBtnVideo {
+    -webkit-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+            transform: translateX(0%);
+    opacity: 1;
   }
 
   .functional__net {
