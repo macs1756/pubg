@@ -840,6 +840,24 @@ footer {
 
 .tel__img img {
   width: calc(200px + 100 * ((100vw - 320px) / 1600));
+  padding-right: 14%;
+}
+
+.tel__img-item {
+  opacity: 0;
+  -webkit-transform: scaleX(0);
+      -ms-transform: scaleX(0);
+          transform: scaleX(0);
+}
+
+.tel__img-item.active {
+  -webkit-transition: all 1s linear;
+  -o-transition: all 1s linear;
+  transition: all 1s linear;
+  opacity: 1;
+  -webkit-transform: scaleX(1);
+      -ms-transform: scaleX(1);
+          transform: scaleX(1);
 }
 
 .tel__btn {

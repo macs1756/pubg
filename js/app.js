@@ -252,3 +252,11 @@ let area7 = new ScrollMagic.Scene({
 	reverse: false
 }).setClassToggle( ".functional__p" ,  "active" ).addTo(controller);
 
+
+
+
+let area8 = new ScrollMagic.Scene({	
+	triggerElement: ".functional__title",
+	reverse: false
+}).setClassToggle( ".tel__img-item" ,  "active" ).addTo(controller);
+
