@@ -193,72 +193,62 @@ if(window.innerWidth < 601){
 
 //scroll effect
 
-//елементи яким ми хочемо задати скролл
-let scrollAnimation = document.querySelectorAll(".anim");
-let intialBtnBuy = document.querySelector(".initial__btn-buy");
-let intialBtnVideo = document.querySelector(".initial__btn-video");
+
+//РєРѕРЅС‚СЂРѕР»РµСЂ
+let  controller = new ScrollMagic.Controller();
+
+//Р·Р°РїСѓСЃРє Р°РЅС–РјР°С†С–С—(С‚СЂРёРіРіРµСЂ РµР»РµРјРµРЅС‚Р°)
 
 
+function initScroll(){
+	let area = new ScrollMagic.Scene({	
+		offset: 0,
+		reverse: false
+	}).setClassToggle( ".initial__title" ,  "active" ).addTo(controller);
+
+	let area2 = new ScrollMagic.Scene({	
+		offset: 0,
+		reverse: false
+	}).setClassToggle( ".initial__p-top" ,  "active" ).addTo(controller);
+
+	let area3 = new ScrollMagic.Scene({	
+		offset: 0,
+		reverse: false
+	}).setClassToggle( ".initial__p-bottom" ,  "active" ).addTo(controller);
 
 
+	
+
+	let area4 = new ScrollMagic.Scene({	
+		offset: 0,
+		reverse: false
+	}).setClassToggle( ".initial__btn-buy" ,  "active" ).addTo(controller);
 
 
-
-if(scrollAnimation.length > 0){
-	window.addEventListener("scroll" , AddScrollEffect);
-	function AddScrollEffect() {
-		for(index=0; index<scrollAnimation.length; index++){
-				//получаємо всі елементи яким потрібно примінити ефект
-				let animItem = scrollAnimation[index];
-				//получаємо висоту елемента 
-				let animItemHeight = animItem.offsetHeight;
-				//висота підносно верху вікна віндовс
-				let animItemOffSet = offset(animItem).top;
-				//коефіцієнт коли почне працювати анімація
-				let animStart = 6;
-
-				//calc
-				let animItemPoint = window.innerHeight - animItemHeight / animStart;
-
-				if(animItemHeight > window.innerHeight){
-					let animItemPoint = window.innerHeight - window.innerHeight / animStart;
-				}else{
-					let animItemPoint = window.innerHeight - animItemHeight / animStart;
-				}
-
-				
-				if((scrollY > animItemOffSet - animItemPoint) && scrollY < (animItemOffSet + animItemHeight)){
-					animItem.classList.add("active");
-					intialBtnBuy.classList.add("activeBtnBuy");
-					intialBtnVideo.classList.add("activeBtnVideo");
-				}else{
-					
-				}
+	let area5 = new ScrollMagic.Scene({	
+		offset: 0,
+		reverse: false
+	}).setClassToggle( ".initial__btn-video" ,  "active" ).addTo(controller);
 
 
-		}
-	}
-
-
-  				//функція вираховує позицію елемента відносно віндовс
-	function offset(el){
-		const rect = el.getBoundingClientRect(),
-		scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
-		scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-		return { top: rect.top + scrollTop, left: rect.left + scrollLeft}
-	}
-
-
-
-
-
-
-
-
-//при запуску функції одразу анімація блоку інітіал виконується одразу
-	setTimeout(AddScrollEffect, 300)
-	//AddScrollEffect();
 }
 
 
+setTimeout(initScroll , 300);
+
+
+
+
+
+let area6 = new ScrollMagic.Scene({	
+	triggerElement: ".initial__dekor-weapon",
+	reverse: false
+}).setClassToggle( ".functional__title" ,  "active" ).addTo(controller);
+
+
+
+let area7 = new ScrollMagic.Scene({	
+	triggerElement: ".initial__dekor-weapon",
+	reverse: false
+}).setClassToggle( ".functional__p" ,  "active" ).addTo(controller);
 
