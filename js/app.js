@@ -240,6 +240,9 @@ setTimeout(initScroll , 300);
 
 
 
+
+
+
 let area6 = new ScrollMagic.Scene({	
 	triggerElement: ".initial__dekor-weapon",
 	reverse: false
@@ -260,3 +263,39 @@ let area8 = new ScrollMagic.Scene({
 	reverse: false
 }).setClassToggle( ".tel__img-item" ,  "active" ).addTo(controller);
 
+
+
+
+let area9 = new ScrollMagic.Scene({	
+	triggerElement: ".functional__description-title",
+	reverse: false
+}).setClassToggle( ".buy" ,  "active" ).addTo(controller);
+
+
+let area10 = new ScrollMagic.Scene({	
+	triggerElement: ".buy",
+	reverse: false
+}).setClassToggle( ".about__title" ,  "active" ).addTo(controller);
+
+
+const swiper = new Swiper('.swiper', {
+	navigation: {
+		nextEl: ".arrow__next",
+		prevEl: ".arrow__prev"
+	},
+	spaceBetween: 40,
+	breakpoints: {
+		600: {
+			loop:  true
+		}
+	}
+
+	
+
+ 
+
+
+
+
+}
+);
