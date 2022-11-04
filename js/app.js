@@ -278,6 +278,20 @@ let area10 = new ScrollMagic.Scene({
 }).setClassToggle( ".about__title" ,  "active" ).addTo(controller);
 
 
+
+let area11 = new ScrollMagic.Scene({	
+	triggerElement: ".swiper",
+	reverse: false
+}).setClassToggle( ".price__title" ,  "active" ).addTo(controller);
+
+
+
+
+
+
+
+
+
 const swiper = new Swiper('.swiper', {
 	navigation: {
 		nextEl: ".arrow__next",
