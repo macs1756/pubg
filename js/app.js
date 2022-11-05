@@ -288,6 +288,32 @@ let area11 = new ScrollMagic.Scene({
 
 
 
+let area12 = new ScrollMagic.Scene({	
+	triggerElement: ".price__app",
+	reverse: true
+}).setClassToggle( ".item__normal" ,  "active" ).addTo(controller);
+
+
+let area13 = new ScrollMagic.Scene({	
+	triggerElement: ".trigerForNextEl",
+	reverse: true
+}).setClassToggle( ".item__standart" ,  "active" ).addTo(controller);
+
+
+let trigerFor14 = ".price__app";
+
+if(window.innerWidth < 993){
+	trigerFor14 = ".trigerForNextEl2";
+};
+
+
+
+let area14 = new ScrollMagic.Scene({	
+	triggerElement: trigerFor14,
+	reverse: true
+}).setClassToggle( ".item__pro" ,  "active" ).addTo(controller);
+
+
 
 
 
