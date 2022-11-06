@@ -77,8 +77,6 @@ if(
 	moreLanguage.classList.remove("more__language-active");
 }
 
-
-
 });
 
 
@@ -314,6 +312,34 @@ let area14 = new ScrollMagic.Scene({
 }).setClassToggle( ".item__pro" ,  "active" ).addTo(controller);
 
 
+let area15 = new ScrollMagic.Scene({	
+	triggerElement: ".trigerForNextEl3",
+	reverse: false
+}).setClassToggle( ".question__title" ,  "active" ).addTo(controller);
+
+
+
+
+let area16 = new ScrollMagic.Scene({	
+	triggerElement: ".question__title",
+	reverse: true
+}).setClassToggle( ".anim1" ,  "active" ).addTo(controller);
+
+
+let area17 = new ScrollMagic.Scene({	
+	triggerElement: "#anim2",
+	reverse: true
+}).setClassToggle( ".anim2" ,  "active" ).addTo(controller);
+
+
+
+let area18 = new ScrollMagic.Scene({	
+	triggerElement: "#anim5",
+	reverse: false
+}).setClassToggle( ".footer__title" ,  "active" ).addTo(controller);
+
+
+
 
 
 
@@ -329,13 +355,22 @@ const swiper = new Swiper('.swiper', {
 			loop:  true
 		}
 	}
-
-	
-
- 
-
-
-
-
 }
 );
+
+
+//
+
+let openAkardeon = document.querySelectorAll(".question__net-item");
+
+if(openAkardeon.length > 0){
+
+	openAkardeon.forEach(item => {
+		item.addEventListener("click" , function(){
+			let img = this.querySelector("img");
+			img.classList.toggle("active");
+			this.children[1].classList.toggle("active");
+		});
+	});
+	
+};
