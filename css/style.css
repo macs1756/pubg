@@ -1,6 +1,6 @@
 header {
   position: fixed;
-  top: 0px;
+  top: 0;
   left: 0;
   width: 100%;
   z-index: 500;
@@ -39,6 +39,12 @@ header {
   transition: all 0.3s linear;
   -webkit-backdrop-filter: blur(15px);
           backdrop-filter: blur(15px);
+}
+
+@supports not ((-webkit-backdrop-filter: blur()) or (backdrop-filter: blur())) {
+  .scroll {
+    background-color: rgba(0, 0, 0, 0.482);
+  }
 }
 
 .header__wr {
@@ -540,8 +546,8 @@ h6 {
 }
 
 .footer__autor {
-  padding-top: calc(50px + 30 * ((100vw - 320px) / 1600));
-  padding-bottom: 45px;
+  margin-top: calc(50px + 30 * ((100vw - 320px) / 1600));
+  margin-bottom: 45px;
   color: #fff;
 }
 
@@ -1740,6 +1746,46 @@ h6 {
   padding-bottom: calc(75px + 25 * ((100vw - 320px) / 1600));
 }
 
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url("../fonts/Montserrat-Medium.woff2") format("woff2"), url("../fonts/Montserrat-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url("../fonts/Montserrat-Bold.woff2") format("woff2"), url("../fonts/Montserrat-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url("../fonts/Montserrat-ExtraBold.woff2") format("woff2"), url("../fonts/Montserrat-ExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url("../fonts/Montserrat-SemiBold.woff2") format("woff2"), url("../fonts/Montserrat-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
 @media (min-width: 600px) {
   .personal-office {
     max-height: 57px;
@@ -1981,13 +2027,13 @@ h6 {
 
 @media (max-width: 767px) {
   .burger__body {
+    display: block;
     position: absolute;
     top: 100%;
     left: 0;
     z-index: 5;
     background-color: #fff;
     color: skyblue;
-    display: block;
     text-align: left;
     -webkit-transform: translateY(-20px);
         -ms-transform: translateY(-20px);

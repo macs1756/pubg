@@ -1,7 +1,4 @@
 
-
-
-
 function isWebp(){
 	function testWebp(callback) {
 		let webP = new Image();
@@ -18,34 +15,6 @@ function isWebp(){
 }
 	
 isWebp();
-
-
-
-
-
-let dotts = document.querySelectorAll(".initial__dekor-dotts");
-
-function randomaizer(){
-
-	dotts.forEach( dotts=> {
-		let randomWidth = 0 + Math.round(Math.random()* (100- 0));
-		let randomHeight= 0 + Math.round(Math.random()* (100- 0));
-		dotts.style.left = `${randomWidth}%`;
-		dotts.style.top = `${randomHeight}%`;
-	})
-
-}
-
-
-
-randomaizer()
-setTimeout(randomaizer, 1);
-setInterval(randomaizer, 3000);
-
-
-
-
-
 
 
 let moreLanguage = document.querySelector(".more__language");
@@ -191,11 +160,8 @@ if(window.innerWidth < 601){
 
 //scroll effect
 
-
-//РєРѕРЅС‚СЂРѕР»РµСЂ
 let  controller = new ScrollMagic.Controller();
 
-//Р·Р°РїСѓСЃРє Р°РЅС–РјР°С†С–С—(С‚СЂРёРіРіРµСЂ РµР»РµРјРµРЅС‚Р°)
 
 
 function initScroll(){
@@ -374,3 +340,22 @@ if(openAkardeon.length > 0){
 	});
 	
 };
+
+let dotts = document.querySelectorAll(".initial__dekor-dotts");
+
+function randomaizer(){
+
+	dotts.forEach( dotts=> {
+		let randomWidth = 0 + Math.round(Math.random()* (100- 0));
+		let randomHeight= 0 + Math.round(Math.random()* (100- 0));
+		dotts.style.left = `${randomWidth}%`;
+		dotts.style.top = `${randomHeight}%`;
+	})
+
+}
+
+
+
+randomaizer()
+setTimeout(randomaizer, 1);
+setInterval(randomaizer, 3000);
