@@ -216,6 +216,14 @@ let formEmail = document.querySelector(".form__email");
 let regName = /^[а-яА-Яa-zA-ZЄ-ЯҐа-їґ]{3,}$/;
 let regEmail = /^[a-zA-Z0-9_]+@[a-z0-9-]+\.[a-z]{2,6}$/;
 let formBtn = document.querySelector(".form__btn-push");
+let modalWr = document.querySelector(".modal__wr");
+
+modalWr.addEventListener("click", ()=>{
+	modalWr.classList.remove("active");
+});
+
+
+
 
 formBtn.addEventListener("click", ()=>{
 
@@ -227,10 +235,8 @@ if(formName.value === ""){
 	}
 	else{
 		formName.style.borderBottomColor = "rgba(46, 58, 89, 0.43)";
-	}
-
-}
-
+	};
+};
 if(formEmail.value === ""){
 	formEmail.style.borderBottom = "1px solid red";
 }else{
@@ -239,7 +245,20 @@ if(formEmail.value === ""){
 	}else{
 		formEmail.style.borderBottomColor = "rgba(46, 58, 89, 0.43)";
 	}
-}	
+};
 
+if(regName.test(formName.value) && regEmail.test(formEmail.value)){
+	modalWr.classList.add("active");
+};
+});
+
+
+let questionItem = document.querySelectorAll(".question__net-item");
+
+
+questionItem.forEach(item=>{
+	item.addEventListener("click", ()=>{
+			item.children[0].children[1].classList.toggle("active");
+			item.children[1].classList.toggle("active");
+	})
 })
-
