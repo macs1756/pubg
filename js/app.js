@@ -1,4 +1,7 @@
 
+
+
+
 function isWebp(){
 	function testWebp(callback) {
 		let webP = new Image();
@@ -15,6 +18,34 @@ function isWebp(){
 }
 	
 isWebp();
+
+
+
+
+
+let dotts = document.querySelectorAll(".initial__dekor-dotts");
+
+function randomaizer(){
+
+	dotts.forEach( dotts=> {
+		let randomWidth = 0 + Math.round(Math.random()* (100- 0));
+		let randomHeight= 0 + Math.round(Math.random()* (100- 0));
+		dotts.style.left = `${randomWidth}%`;
+		dotts.style.top = `${randomHeight}%`;
+	})
+
+}
+
+
+
+randomaizer()
+setTimeout(randomaizer, 1);
+setInterval(randomaizer, 3000);
+
+
+
+
+
 
 
 let moreLanguage = document.querySelector(".more__language");
@@ -45,6 +76,8 @@ if(
 }else{
 	moreLanguage.classList.remove("more__language-active");
 }
+
+
 
 });
 
@@ -132,21 +165,19 @@ languageOption.forEach(item=>{
 
 
 
+let initialLine = document.querySelector(".initial__line");
 
+if(initialLine){
 
-
-
-
-function randomOpacity(){
-	let randomValue = 0 + Math.round(Math.random()* (100- 0)) / 100;
-	let initialLine = document.querySelector(".initial__line");
-	initialLine.style.opacity = randomValue ;
+	function randomOpacity(){
+		let randomValue = 0 + Math.round(Math.random()* (100- 0)) / 100;
+		initialLine.style.opacity = randomValue ;
+	}
+	setInterval(randomOpacity, 1000);
 }
 
 
 
-
-setInterval(randomOpacity, 1000);
 
 
 if(window.innerWidth < 601){
@@ -160,71 +191,37 @@ if(window.innerWidth < 601){
 
 //scroll effect
 
+
+//РєРѕРЅС‚СЂРѕР»РµСЂ
 let  controller = new ScrollMagic.Controller();
 
+//Р·Р°РїСѓСЃРє Р°РЅС–РјР°С†С–С—(С‚СЂРёРіРіРµСЂ РµР»РµРјРµРЅС‚Р°)
 
 
 function initScroll(){
 	let area = new ScrollMagic.Scene({	
 		offset: 0,
 		reverse: false
-	}).setClassToggle( ".initial__title" ,  "active" ).addTo(controller);
-
-	let area2 = new ScrollMagic.Scene({	
-		offset: 0,
-		reverse: false
-	}).setClassToggle( ".initial__p-top" ,  "active" ).addTo(controller);
-
-	let area3 = new ScrollMagic.Scene({	
-		offset: 0,
-		reverse: false
-	}).setClassToggle( ".initial__p-bottom" ,  "active" ).addTo(controller);
-
-
-	
-
-	let area4 = new ScrollMagic.Scene({	
-		offset: 0,
-		reverse: false
-	}).setClassToggle( ".initial__btn-buy" ,  "active" ).addTo(controller);
-
-
-	let area5 = new ScrollMagic.Scene({	
-		offset: 0,
-		reverse: false
-	}).setClassToggle( ".initial__btn-video" ,  "active" ).addTo(controller);
-
-
+	}).setClassToggle( ".initialAnimation" ,  "active" ).addTo(controller);
 }
 
-
 setTimeout(initScroll , 300);
-
-
-
-
-
 
 
 
 let area6 = new ScrollMagic.Scene({	
 	triggerElement: ".initial__dekor-weapon",
 	reverse: false
-}).setClassToggle( ".functional__title" ,  "active" ).addTo(controller);
+}).setClassToggle( ".functionalAnimation" ,  "active" ).addTo(controller);
 
 
-
-let area7 = new ScrollMagic.Scene({	
-	triggerElement: ".initial__dekor-weapon",
-	reverse: false
-}).setClassToggle( ".functional__p" ,  "active" ).addTo(controller);
 
 
 
 
 let area8 = new ScrollMagic.Scene({	
 	triggerElement: ".functional__title",
-	reverse: false
+	reverse: false,
 }).setClassToggle( ".tel__img-item" ,  "active" ).addTo(controller);
 
 
@@ -232,20 +229,20 @@ let area8 = new ScrollMagic.Scene({
 
 let area9 = new ScrollMagic.Scene({	
 	triggerElement: ".functional__description-title",
-	reverse: false
+	reverse: false,
 }).setClassToggle( ".buy" ,  "active" ).addTo(controller);
 
 
 let area10 = new ScrollMagic.Scene({	
 	triggerElement: ".buy",
-	reverse: false
+	reverse: false,
 }).setClassToggle( ".about__title" ,  "active" ).addTo(controller);
 
 
 
 let area11 = new ScrollMagic.Scene({	
 	triggerElement: ".swiper",
-	reverse: false
+	reverse: false,
 }).setClassToggle( ".price__title" ,  "active" ).addTo(controller);
 
 
@@ -254,13 +251,13 @@ let area11 = new ScrollMagic.Scene({
 
 let area12 = new ScrollMagic.Scene({	
 	triggerElement: ".price__app",
-	reverse: true
+	reverse: true,
 }).setClassToggle( ".item__normal" ,  "active" ).addTo(controller);
 
 
 let area13 = new ScrollMagic.Scene({	
 	triggerElement: ".trigerForNextEl",
-	reverse: true
+	reverse: true,
 }).setClassToggle( ".item__standart" ,  "active" ).addTo(controller);
 
 
@@ -268,44 +265,32 @@ let trigerFor14 = ".price__app";
 
 if(window.innerWidth < 993){
 	trigerFor14 = ".trigerForNextEl2";
-};
+}
 
 
 
 let area14 = new ScrollMagic.Scene({	
 	triggerElement: trigerFor14,
-	reverse: true
+	reverse: true,
 }).setClassToggle( ".item__pro" ,  "active" ).addTo(controller);
 
 
 let area15 = new ScrollMagic.Scene({	
 	triggerElement: ".trigerForNextEl3",
-	reverse: false
+	reverse: false,
 }).setClassToggle( ".question__title" ,  "active" ).addTo(controller);
-
-
 
 
 let area16 = new ScrollMagic.Scene({	
 	triggerElement: ".question__title",
-	reverse: true
+	reverse: true,
 }).setClassToggle( ".anim1" ,  "active" ).addTo(controller);
 
 
 let area17 = new ScrollMagic.Scene({	
 	triggerElement: "#anim2",
-	reverse: true
+	reverse: true,
 }).setClassToggle( ".anim2" ,  "active" ).addTo(controller);
-
-
-
-let area18 = new ScrollMagic.Scene({	
-	triggerElement: "#anim5",
-	reverse: false
-}).setClassToggle( ".footer__title" ,  "active" ).addTo(controller);
-
-
-
 
 
 
@@ -325,37 +310,17 @@ const swiper = new Swiper('.swiper', {
 );
 
 
-//
+let formName = document.querySelector(".form");
+let formInput = document.querySelector(".form__name-name");
 
-let openAkardeon = document.querySelectorAll(".question__net-item");
+formName.addEventListener("click", function(){
+	this.classList.add("active");
+})
 
-if(openAkardeon.length > 0){
-
-	openAkardeon.forEach(item => {
-		item.addEventListener("click" , function(){
-			let img = this.querySelector("img");
-			img.classList.toggle("active");
-			this.children[1].classList.toggle("active");
-		});
-	});
+formInput.addEventListener("blur", function(){
+	if(!formInput.value){
+		formName.classList.remove("active");
+	}
 	
-};
-
-let dotts = document.querySelectorAll(".initial__dekor-dotts");
-
-function randomaizer(){
-
-	dotts.forEach( dotts=> {
-		let randomWidth = 0 + Math.round(Math.random()* (100- 0));
-		let randomHeight= 0 + Math.round(Math.random()* (100- 0));
-		dotts.style.left = `${randomWidth}%`;
-		dotts.style.top = `${randomHeight}%`;
-	})
-
-}
-
-
-
-randomaizer()
-setTimeout(randomaizer, 1);
-setInterval(randomaizer, 3000);
+	
+})
