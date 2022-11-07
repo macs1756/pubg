@@ -593,13 +593,20 @@ h6 {
 }
 
 .form__comment-wr textarea {
+  padding: 10px 5px;
+  border: 1px solid transparent;
   border-bottom: 1px solid rgba(46, 58, 89, 0.43);
   height: 30px;
   height: calc(70px + 30 * ((100vw - 320px) / 1600));
 }
 
+.form__name-wr input {
+  text-transform: capitalize;
+}
+
 .form__name-wr,
-.form__email-wr {
+.form__email-wr,
+.form__comment-wr {
   -webkit-transition: all 0.8s linear;
   -o-transition: all 0.8s linear;
   transition: all 0.8s linear;
@@ -609,11 +616,14 @@ h6 {
 }
 
 .form__name-wr label,
-.form__email-wr label {
+.form__email-wr label,
+.form__comment-wr label {
   -webkit-transition: all 0.8s linear;
   -o-transition: all 0.8s linear;
   transition: all 0.8s linear;
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   padding: 3px;
   transition: all 0.8s linear;
   position: absolute;
@@ -622,7 +632,8 @@ h6 {
 }
 
 .form__name-wr label img,
-.form__email-wr label img {
+.form__email-wr label img,
+.form__comment-wr label img {
   -webkit-transition: all 0.8s linear;
   -o-transition: all 0.8s linear;
   transition: all 0.8s linear;
@@ -630,11 +641,14 @@ h6 {
 }
 
 .form__name-wr input,
-.form__email-wr input {
+.form__email-wr input,
+.form__comment-wr input {
   width: 100%;
   border: 1px solid transparent;
   border-bottom: 1px solid rgba(46, 58, 89, 0.43);
-  height: 30px;
+  height: 35px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   font-size: calc(15px + 3 * ((100vw - 320px) / 1600));
   position: relative;
   z-index: 2;
@@ -657,13 +671,17 @@ h6 {
   font-weight: 600;
 }
 
-.form__name-wr.active {
+.form__name-wr.active,
+.form__email-wr.active,
+.form__comment-wr.active {
   -webkit-transition: all 0.8s linear;
   -o-transition: all 0.8s linear;
   transition: all 0.8s linear;
 }
 
-.form__name-wr.active input {
+.form__name-wr.active input,
+.form__email-wr.active input,
+.form__comment-wr.active input {
   -webkit-transition: all 0.9s linear;
   -o-transition: all 0.9s linear;
   transition: all 0.9s linear;
@@ -671,24 +689,42 @@ h6 {
   border-radius: 5px;
 }
 
-.form__name-wr.active label {
+.form__name-wr.active label,
+.form__email-wr.active label,
+.form__comment-wr.active label {
   -webkit-transition: all 0.8s linear;
   -o-transition: all 0.8s linear;
   transition: all 0.8s linear;
   font-size: 10px;
   background-color: #fff;
-  top: 10px;
+  top: -13px;
   left: 10px;
-  position: relative;
+  position: absolute;
   z-index: 3;
 }
 
-.form__name-wr.active label img {
+.form__name-wr.active label img,
+.form__email-wr.active label img,
+.form__comment-wr.active label img {
   -webkit-transition: all 0.8s linear;
   -o-transition: all 0.8s linear;
   transition: all 0.8s linear;
   width: 15px;
   padding-right: 4px;
+}
+
+.form__comment-wr.active {
+  -webkit-transition: all 0.8s linear;
+  -o-transition: all 0.8s linear;
+  transition: all 0.8s linear;
+}
+
+.form__comment-wr.active textarea {
+  -webkit-transition: all 0.9s linear;
+  -o-transition: all 0.9s linear;
+  transition: all 0.9s linear;
+  border: 1px solid rgba(46, 58, 89, 0.43);
+  border-radius: 5px;
 }
 
 .cen {
@@ -2453,7 +2489,8 @@ h6 {
   }
 
   .form__name-wr,
-  .form__email-wr {
+  .form__email-wr,
+  .form__comment-wr {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 100%;
             flex: 1 1 100%;
