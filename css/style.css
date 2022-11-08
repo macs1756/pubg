@@ -388,9 +388,9 @@ a {
 }
 
 h1 {
-  -webkit-transition: all 0.8s linear;
-  -o-transition: all 0.8s linear;
-  transition: all 0.8s linear;
+  -webkit-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+  transition: all 0.5s linear;
   position: relative;
   font-weight: 800;
   line-height: 120%;
@@ -548,6 +548,7 @@ h6 {
 }
 
 .footer__contact {
+  position: relative;
   border-radius: 5px;
   -webkit-box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.03);
           box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.03);
@@ -781,6 +782,37 @@ h6 {
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+.footer__telegram,
+.footer__discord {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 115px;
+  height: 115px;
+  background: -o-linear-gradient(346.99deg, #0AA6FE -49.1%, #05FFFF 177.15%);
+  background: linear-gradient(103.01deg, #0AA6FE -49.1%, #05FFFF 177.15%);
+  -webkit-box-shadow: 0px 4px 25px rgba(10, 166, 254, 0.48), inset 0px 0px 25px rgba(0, 50, 180, 0.3);
+          box-shadow: 0px 4px 25px rgba(10, 166, 254, 0.48), inset 0px 0px 25px rgba(0, 50, 180, 0.3);
+  border-radius: 15px;
+  -webkit-transform: translate(50%, -50%) rotate(-45deg);
+      -ms-transform: translate(50%, -50%) rotate(-45deg);
+          transform: translate(50%, -50%) rotate(-45deg);
+}
+
+.footer__telegram img,
+.footer__discord img {
+  width: 54px;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.footer__discord {
+  position: absolute;
+  right: 100%;
+  top: 100%;
 }
 
 .cen {
@@ -1061,9 +1093,9 @@ h6 {
 
 .initial__p-top {
   padding-bottom: 30px;
-  -webkit-transition: all 0.8s linear 0.8s;
-  -o-transition: all 0.8s linear 0.8s;
-  transition: all 0.8s linear 0.8s;
+  -webkit-transition: all 0.5s linear 0.5s;
+  -o-transition: all 0.5s linear 0.5s;
+  transition: all 0.5s linear 0.5s;
   opacity: 0;
   -webkit-transform: translateY(-15px);
       -ms-transform: translateY(-15px);
@@ -1078,13 +1110,10 @@ h6 {
 }
 
 .initial__p-bottom {
-  -webkit-transition: all 0.8s linear 1.4s;
-  -o-transition: all 0.8s linear 1.4s;
-  transition: all 0.8s linear 1.4s;
+  -webkit-transition: all 0.5s linear 1s;
+  -o-transition: all 0.5s linear 1s;
+  transition: all 0.5s linear 1s;
   padding-bottom: 46px;
-  -webkit-transition: all 0.8s linear 1.6s;
-  -o-transition: all 0.8s linear 1.6s;
-  transition: all 0.8s linear 1.6s;
   opacity: 0;
   -webkit-transform: translateY(-15px);
       -ms-transform: translateY(-15px);
@@ -1146,9 +1175,9 @@ h6 {
 }
 
 .initial__title {
-  -webkit-transition: all 0.8s linear;
-  -o-transition: all 0.8s linear;
-  transition: all 0.8s linear;
+  -webkit-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+  transition: all 0.5s linear;
   opacity: 0;
   -webkit-transform: translateY(-30px);
       -ms-transform: translateY(-30px);
@@ -1640,9 +1669,6 @@ h6 {
 }
 
 .price__net-item {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 33.333%;
-          flex: 0 1 33.333%;
   background: #FFFFFF;
   -webkit-box-shadow: 0px 20px 35px rgba(0, 0, 0, 0.05);
           box-shadow: 0px 20px 35px rgba(0, 0, 0, 0.05);
@@ -1653,7 +1679,8 @@ h6 {
 
 .price__item {
   font-weight: 600;
-  min-height: 610px;
+  min-height: 1px;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1691,7 +1718,6 @@ h6 {
 }
 
 .price__item-list {
-  height: 100%;
   font-weight: 400;
   padding-left: 60px;
   padding-right: 60px;
@@ -2222,10 +2248,6 @@ h6 {
     height: calc(300px + 410 * ((100vw - 320px) / 1920));
   }
 
-  .footer__title {
-    padding-bottom: calc(20px + 70 * ((100vw - 320px) / 1920));
-  }
-
   .footer__title span {
     width: calc(25px + 15 * ((100vw - 320px) / 1920));
   }
@@ -2255,6 +2277,10 @@ h6 {
   }
 
   .footer__contact {
+    padding-top: calc(80px + -35 * ((100vw - 320px) / 1920));
+  }
+
+  .footer__contact {
     margin-left: calc(30px + 50 * ((100vw - 320px) / 1920));
   }
 
@@ -2263,7 +2289,7 @@ h6 {
   }
 
   .footer__contact {
-    margin-bottom: calc(0px + 100 * ((100vw - 320px) / 1920));
+    margin-bottom: calc(30px + 70 * ((100vw - 320px) / 1920));
   }
 
   .footer__contact h6 {
@@ -2318,6 +2344,21 @@ h6 {
 
   .modal__body h4 {
     font-size: calc(17px + 3 * ((100vw - 320px) / 1920));
+  }
+
+  .footer__telegram,
+  .footer__discord {
+    width: calc(75px + 40 * ((100vw - 320px) / 1920));
+  }
+
+  .footer__telegram,
+  .footer__discord {
+    height: calc(75px + 40 * ((100vw - 320px) / 1920));
+  }
+
+  .footer__telegram img,
+  .footer__discord img {
+    width: calc(36px + 18 * ((100vw - 320px) / 1920));
   }
 
   .initial {
@@ -2789,6 +2830,8 @@ h6 {
 
 @media (max-width: 767px) {
   .burger__body {
+    padding: 10px 20px 10px 10px;
+    font-weight: 800;
     display: block;
     position: absolute;
     top: 100%;
@@ -2810,7 +2853,7 @@ h6 {
   .burger__body li {
     position: relative;
     z-index: 5;
-    padding: 10px;
+    padding: 15px 10px;
   }
 
   .burger__body li:active {
@@ -2915,9 +2958,9 @@ h6 {
         -ms-transform: translateX(-100%);
             transform: translateX(-100%);
     opacity: 0;
-    -webkit-transition: all 0.8s linear 2.4s;
-    -o-transition: all 0.8s linear 2.4s;
-    transition: all 0.8s linear 2.4s;
+    -webkit-transition: all 0.5s linear 2s;
+    -o-transition: all 0.5s linear 2s;
+    transition: all 0.5s linear 2s;
   }
 
   .initial__btn-video {
@@ -2925,9 +2968,9 @@ h6 {
         -ms-transform: translateX(100%);
             transform: translateX(100%);
     opacity: 0;
-    -webkit-transition: all 0.8s linear 2.4s;
-    -o-transition: all 0.8s linear 2.4s;
-    transition: all 0.8s linear 2.4s;
+    -webkit-transition: all 0.5s linear 2s;
+    -o-transition: all 0.5s linear 2s;
+    transition: all 0.5s linear 2s;
   }
 
   .initial__btn-video.active {
@@ -3009,6 +3052,29 @@ h6 {
   .form__email-wr.active label,
   .form__comment-wr.active label {
     top: -10px;
+  }
+
+  .footer__telegram,
+  .footer__discord {
+    right: 50%;
+    -webkit-transform: translate(100%, -50%) rotate(-45deg);
+        -ms-transform: translate(100%, -50%) rotate(-45deg);
+            transform: translate(100%, -50%) rotate(-45deg);
+  }
+
+  .footer__discord {
+    top: 0;
+    right: 50%;
+    -webkit-transform: translate(-13%, -50%) rotate(-45deg);
+        -ms-transform: translate(-13%, -50%) rotate(-45deg);
+            transform: translate(-13%, -50%) rotate(-45deg);
+  }
+
+  .footer__telegram {
+    right: 50%;
+    -webkit-transform: translate(113%, -50%) rotate(-45deg);
+        -ms-transform: translate(113%, -50%) rotate(-45deg);
+            transform: translate(113%, -50%) rotate(-45deg);
   }
 
   .no-webp .initial:after {
