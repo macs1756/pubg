@@ -1936,9 +1936,9 @@ h6 {
 #anim3,
 #anim4,
 #anim5 {
-  -webkit-transition: all 0.8s linear;
-  -o-transition: all 0.8s linear;
-  transition: all 0.8s linear;
+  -webkit-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+  transition: all 0.5s linear;
   -webkit-transform: scaleX(0);
       -ms-transform: scaleX(0);
           transform: scaleX(0);
@@ -1957,21 +1957,21 @@ h6 {
 }
 
 #anim2 {
-  -webkit-transition: all 0.8s linear 0.8s;
-  -o-transition: all 0.8s linear 0.8s;
-  transition: all 0.8s linear 0.8s;
+  -webkit-transition: all 0.8s linear 0.5s;
+  -o-transition: all 0.8s linear 0.5s;
+  transition: all 0.8s linear 0.5s;
 }
 
 #anim4 {
-  -webkit-transition: all 0.8s linear 0.8s;
-  -o-transition: all 0.8s linear 0.8s;
-  transition: all 0.8s linear 0.8s;
+  -webkit-transition: all 0.8s linear 0.5s;
+  -o-transition: all 0.8s linear 0.5s;
+  transition: all 0.8s linear 0.5s;
 }
 
 #anim5 {
-  -webkit-transition: all 0.8s linear 1.6s;
-  -o-transition: all 0.8s linear 1.6s;
-  transition: all 0.8s linear 1.6s;
+  -webkit-transition: all 0.8s linear 1s;
+  -o-transition: all 0.8s linear 1s;
+  transition: all 0.8s linear 1s;
 }
 
 .question__question {
